@@ -1,3 +1,6 @@
+/* Added by React */
+/* ======================================== */
+
 .App {
   text-align: center;
 }
@@ -15,7 +18,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /*min-height: 100vh;*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +38,35 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* ======================================== */
+
+
+/* Added by me */
+/* ======================================== */
+
+:root {
+  background-color: #282c34;
+}
+
+.header {
+  min-height: 95vh; /* not sure why it's min-height*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(30px + 2vmin); /* read about this more later because I'm curious*/
+  color: white;
+}
+
+.footer {
+  min-height: 5vh;
+  font-size: calc(3px + 2vmin);
+  color: white;
+}
+
+#footer-link {
+  text-decoration: underline;
+  color: #61dafb;
 }
