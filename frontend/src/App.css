@@ -50,14 +50,22 @@
   background-color: #282c34;
 }
 
-.header {
+.main-container {
   min-height: 95vh; /* not sure why it's min-height */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(30px + 2vmin); /* read about this more later because I'm curious */
+}
+
+.headers-container {
+  position: relative;
+  bottom: 8vh;
+}
+
+.header {
   color: white;
+  font-size: calc(30px + 2vmin); /* read about this more later because I'm curious */
   text-shadow: 1.5px 1.5px black;
 }
 
@@ -73,6 +81,7 @@
 .code {
   padding: 0 1vw 0 1vw;
   font-size: calc(5px + 2vmin);
+  color: white;
   border: 1.5px solid #1E2124;
   border-radius: 10px;
   background-color: #2E3136;
@@ -84,8 +93,8 @@
   color: white;
 }
 
-#footer-link {
-  text-decoration: underline;
+a {
+  text-decoration: none;
   color: #61dafb;
 }
 

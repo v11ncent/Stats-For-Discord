@@ -1,5 +1,8 @@
-import logo from './logo.svg';
+// imports
+// =======================
 import './App.css';
+import Navbar from './components/Navbar';
+// =======================
 
 function App() {
   return (
@@ -11,16 +14,25 @@ function App() {
         </header>
       */}
 
-      <div className="header">
-        <code>Hello, world.</code>
-        <div className="sub-header code">
-          <code>coming soon</code>
+      <div>
+        <Navbar />
+      </div>
+
+      <div className="headers-container">
+        <div className="main-container">
+          <div className="header">
+            <code>Hello, world.</code>
+          </div>
+          <div className="sub-header code">
+            <code>coming soon</code>
+          </div>
         </div>
       </div>
+
       <div>
         <footer className="footer">
           <code>
-            <a id="footer-link" href="https://github.com/vince1444" target="_blank" rel="noopener noreferrer">me</a>
+            <a href="https://github.com/vince1444" target="_blank" rel="noopener noreferrer">about me</a>
           </code>
         </footer>
       </div>
