@@ -13,11 +13,14 @@ function App() {
 
       <div className="header">
         <code>Hello, world.</code>
+        <div className="sub-header code">
+          <code>coming soon</code>
+        </div>
       </div>
       <div>
         <footer className="footer">
           <code>
-            <a id="footer-link" href="https://github.com/vince1444" target="_blank" rel="noopener noreferrer">By me.</a>
+            <a id="footer-link" href="https://github.com/vince1444" target="_blank" rel="noopener noreferrer">me</a>
           </code>
         </footer>
       </div>

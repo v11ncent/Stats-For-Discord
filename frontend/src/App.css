@@ -51,13 +51,31 @@
 }
 
 .header {
-  min-height: 95vh; /* not sure why it's min-height*/
+  min-height: 95vh; /* not sure why it's min-height */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(30px + 2vmin); /* read about this more later because I'm curious*/
+  font-size: calc(30px + 2vmin); /* read about this more later because I'm curious */
   color: white;
+  text-shadow: 1.5px 1.5px black;
+}
+
+.sub-header {
+  position: relative;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4vh;
+}
+
+.code {
+  padding: 0 1vw 0 1vw;
+  font-size: calc(5px + 2vmin);
+  border: 1.5px solid #1E2124;
+  border-radius: 10px;
+  background-color: #2E3136;
 }
 
 .footer {
@@ -70,3 +88,6 @@
   text-decoration: underline;
   color: #61dafb;
 }
+
+
+/* ======================================== */
