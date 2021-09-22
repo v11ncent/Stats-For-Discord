@@ -5,16 +5,24 @@ import { FaBars } from 'react-icons/fa';
 
 function Navbar() {
     const [showNav, setShowNav] = useState(false);
-
-
+    const [FaBarStyle, setFaBarStyle] = useState({ color: 'white', size: 30, className: "icon" });
+    
     return (
         // https://github.com/react-icons/react-icons
-        <IconContext.Provider value={{ color: 'white', size: 30, className: "icon" }}>
+        <IconContext.Provider value={FaBarStyle}>
             <div>
-                <FaBars />
+                <FaBars onClick={() => {
+                    if (showNav) {
+                        setShowNav(false);
+                        setFaBarStyle({ color: 'white', size: 30, className: "icon" });
+                    }
+                    else {
+                        setShowNav(true);
+                        setFaBarStyle({ color: 'white', size: 30, style: { transform: 'rotate(90deg)' }, className: "icon" });
+                    }
+                }} />
             </div>
         </IconContext.Provider>
-        
     )
 }
 

@@ -18,16 +18,13 @@ function App() {
         <Navbar />
       </div>
 
-      <div className="headers-container">
-        <div className="main-container">
-          <div className="header">
-            <code>Hello, world.</code>
-          </div>
-          <div className="sub-header code">
-            <code>coming soon</code>
-          </div>
+     
+      <div className="main-container">
+        <div className="header">
+          <code>Hello, world.</code>
         </div>
       </div>
+     
 
       <div>
         <footer className="footer">

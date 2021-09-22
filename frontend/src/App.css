@@ -58,11 +58,6 @@
   justify-content: center;
 }
 
-.headers-container {
-  position: relative;
-  bottom: 8vh;
-}
-
 .header {
   color: white;
   font-size: calc(30px + 2vmin); /* read about this more later because I'm curious */
@@ -80,7 +75,6 @@
 
 .code {
   padding: 0 1vw 0 1vw;
-  font-size: calc(5px + 2vmin);
   color: white;
   border: 1.5px solid #1E2124;
   border-radius: 10px;
