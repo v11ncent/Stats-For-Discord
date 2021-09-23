@@ -14,18 +14,16 @@ function App() {
         </header>
       */}
 
-      <div>
-        <Navbar />
-      </div>
+      
+      <Navbar />
+      
 
-     
       <div className="main-container">
         <div className="header">
           <code>Hello, world.</code>
         </div>
       </div>
      
-
       <div>
         <footer className="footer">
           <code>

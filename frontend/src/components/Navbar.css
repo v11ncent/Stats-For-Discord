@@ -1,16 +1,63 @@
 .icon {
-    position: absolute;
+    position: fixed;
     top: 5vh;
     left: 3vw;
+    /* Since FA icons are svgs, we can use the stroke properties */
+    stroke: #61dafb;
+    stroke-width: 10;
     cursor: pointer;
-    animation-name: rotate;
+    z-index: 1; /* Places icon above the menu. For some reason negative z-index doesn't behave properly */
 }
 
-@keyframes rotate {
+.menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 10%; /* change this to make it responsive */
+    border-right: 1px solid white;
+    color: white;
+    animation: slide-in 1.2s forwards;
+}
+
+
+.open {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode */
+    /* forwards used to retain last keyframe state and applies to target */
+    animation: 0.4s open forwards;
+}
+
+.close {
+    animation: 0.4s close forwards;
+}
+
+@keyframes open {
     from { 
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(90deg);
+        transform: translateX(3vw) rotate(90deg);
+    }
+}
+
+@keyframes close {
+    from {
+        transform: translateX(3vw) rotate(90deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-2vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 100%;
     }
 }

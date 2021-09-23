@@ -51,7 +51,7 @@
 }
 
 .main-container {
-  min-height: 95vh; /* not sure why it's min-height */
+  min-height: 150vh; /* not sure why it's min-height */
   display: flex;
   flex-direction: column;
   align-items: center;
