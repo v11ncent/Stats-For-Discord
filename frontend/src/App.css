@@ -51,7 +51,7 @@
 }
 
 .main-container {
-  min-height: 150vh; /* not sure why it's min-height */
+  min-height: 95vh; /* not sure why it's min-height */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,7 +61,6 @@
 .header {
   color: white;
   font-size: calc(30px + 2vmin); /* read about this more later because I'm curious */
-  text-shadow: 1.5px 1.5px black;
 }
 
 .sub-header {
@@ -81,6 +80,10 @@
   background-color: #2E3136;
 }
 
+.font-emphasis {
+  color: #5865F2;
+}
+
 .footer {
   min-height: 5vh;
   font-size: calc(3px + 2vmin);
@@ -89,8 +92,19 @@
 
 a {
   text-decoration: none;
-  color: #61dafb;
+  color: #7289DA;
 }
 
+.about-link {
+  border-bottom: 2px solid white;
+  transition: 1s ease-out;
+}
 
+.about-link:hover {
+  color: white;
+}
+
+.about-link:not(:hover) {
+  color: #7289DA;
+}
 /* ======================================== */

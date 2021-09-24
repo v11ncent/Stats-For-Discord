@@ -2,9 +2,6 @@
     position: fixed;
     top: 5vh;
     left: 3vw;
-    /* Since FA icons are svgs, we can use the stroke properties */
-    stroke: #61dafb;
-    stroke-width: 10;
     cursor: pointer;
     z-index: 1; /* Places icon above the menu. For some reason negative z-index doesn't behave properly */
 }
@@ -17,28 +14,32 @@
     justify-content: center;
     height: 100%;
     width: 10%; /* change this to make it responsive */
-    border-right: 1px solid white;
-    color: white;
-    animation: slide-in 1.2s forwards;
+    box-shadow: 2px 2px 10px rgb(77, 77, 77);
+    background-color: white;
 }
 
+.menu-open {
+    animation: slide-in .5s forwards;
+}
 
 .open {
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode */
     /* forwards used to retain last keyframe state and applies to target */
-    animation: 0.4s open forwards;
+    animation: open .5s forwards;
 }
 
 .close {
-    animation: 0.4s close forwards;
+    animation: close .5s forwards;
 }
 
 @keyframes open {
     from { 
         transform: rotate(0deg);
+        color: white;
     }
     to {
         transform: translateX(3vw) rotate(90deg);
+        color: #282c34;
     }
 }
 
@@ -53,11 +54,22 @@
 
 @keyframes slide-in {
     from {
-        transform: translateX(-2vw);
+        transform: translateX(-11vw);
         opacity: 0;
     }
     to {
         transform: translateX(0);
         opacity: 100%;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+        opacity: 100;
+    }
+    to {
+        transform: translateX(-10vw);
+        opacity: 0;
     }
 }

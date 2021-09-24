@@ -1,7 +1,7 @@
 // imports
 // =======================
 import './App.css';
-import Navbar from './components/Navbar';
+import NavBar from './components/NavBar';
 // =======================
 
 function App() {
@@ -15,19 +15,22 @@ function App() {
       */}
 
       
-      <Navbar />
+      <NavBar />
       
 
       <div className="main-container">
         <div className="header">
-          <code>Hello, world.</code>
+          <code>Hello</code>
+          <code className="font-emphasis">, </code> 
+          <code>world</code>
+          <code className="font-emphasis">.</code>
         </div>
       </div>
      
       <div>
         <footer className="footer">
           <code>
-            <a href="https://github.com/vince1444" target="_blank" rel="noopener noreferrer">about me</a>
+            <a className="about-link" href="https://github.com/vince1444" target="_blank" rel="noopener noreferrer">about me</a>
           </code>
         </footer>
       </div>
