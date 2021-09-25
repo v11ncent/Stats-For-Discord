@@ -15,4 +15,20 @@ Objectives:
 =================================================
 */
 
-console.log('Hello, world...');
+const Discord = require('discord.js');
+const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_PRESENCES", "GUILD_MEMBERS"] })
+
+client.on('ready', () => {
+  console.log('I am ready!');
+  const idArray = [];
+  client.guilds.cache.each(guild => guild.members.fetch().then(console.log));
+  // console.log(guilds);
+});
+// 476164427968675850
+client.on('messageCreate', (message) => {
+    if (message.content.startsWith('ping')) {
+        message.channel.send('pong!');
+    }
+});
+
+client.login('');
