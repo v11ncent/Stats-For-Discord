@@ -16,7 +16,6 @@ Objectives:
 */
 
 const Discord = require('discord.js');
-const { maxHeaderSize } = require('http');
 const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_PRESENCES", "GUILD_MEMBERS"] });
 
 client.on('ready', () => {
@@ -35,7 +34,7 @@ async function fetchActivity(client) {
     guilds = fetchGuilds(client);
     members = await Promise.all(guilds.map(guild => fetchMembers(guild)));
     for (let i = 0; i < members.length; i++) {
-        await Promise.all(members[i].map(member => activities.push(member)));
+        await Promise.all(members[i].map(member => activities.push(fetchPresence(member))));
     }
     return filterActivity(activities);
 }
@@ -53,7 +52,7 @@ function fetchMembers(guild) {
 }
 
 function fetchPresence(member) {
-    if (member.presence && (member.presence.activities !== undefined)) return member.presence.activities;
+    if (member.presence) return member.presence.activities;
 }
 
 client.login('');
